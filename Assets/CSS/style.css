@@ -246,7 +246,7 @@ form button:active {
 }
 
 /* Responsive layout for desktops and large screens */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1021px) {
     #main {
         display: flex;
         flex-wrap: wrap;
@@ -254,7 +254,7 @@ form button:active {
 
     #search-aside {
         flex-direction: column;
-        max-width: 30vw;
+        max-width: 28vw;
         margin-top: 8px;
     }
 
@@ -265,7 +265,7 @@ form button:active {
     }
 
     #clearSearchesBtn {
-        max-width: 30vw;
+        max-width: 27vw;
     }
 
     #forecast-content {
@@ -343,19 +343,21 @@ form button:active {
         text-align: left;
     }
 
-    .forecast-days {
-        padding-left: 2px;
-        padding-right: 2px;
-    }
-
     ul {
         flex-direction: column;
         padding-top: 8px;
         border-bottom: solid 1.5px var(--tan);
         padding-bottom: 8px;
+        margin-left: 6px;
     }
 
-    ul li button, #clearSearchesBtn {
+    ul li button {
+        width: 27vw;
+        /* margin-right: 6px; */
+        margin-left: 6px;
+    }
+
+    #clearSearchesBtn {
         width: 29vw;
         margin-right: 12px;
         margin-left: 12px;
