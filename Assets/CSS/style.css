@@ -123,7 +123,7 @@ ul button {
 }
 
 #current-city-day, .current-stat div, #forecast-title, .forecast-date, .forecast-stats {
-    font-size: 18px;
+    font-size: 26px;
     padding-top: 6px;
     padding-bottom: 6px;
 }
@@ -147,10 +147,16 @@ ul button {
 .forecast-days {
     margin-top: 6px;
     margin-bottom: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: var(--darkgray);
     color: var(--offwhite);
     border-top: var(--tan) solid 2px;
     border-bottom: var(--tan) solid 2px;
+}
+
+#five-days {
+    margin-bottom: 60px;
 }
 
 #current-uv {
