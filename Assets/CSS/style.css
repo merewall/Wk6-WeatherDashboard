@@ -1,9 +1,9 @@
 :root {
-    --offblack: #001829;
     --darkblue: #030455;
     --blue: #02367A;
     --darkgray: #284B63;
     --offwhite: #F5F5F5;
+    --darkerwhite: #ebebeb; 
     --green: #3C6E71;
     --lightblue: #00B4D8;
     --tan: #ADADAD;
@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(var(--darkblue),var(--blue));
+    background-image: linear-gradient(var(--darkblue) 50%, var(--blue) 75%, var(--lightblue));
     color: var(--offwhite);
     font-size: 48px;
     text-align: center;
@@ -31,9 +31,15 @@ body {
     flex-direction: column;
 }
 
+form {
+    border-bottom: solid 2px var(--darkblue);
+}
+
 #search-row {
     display: flex;
     background-color:var(--offwhite);
+    border-top: solid 2px var(--darkblue);
+    border-bottom: solid 2px var(--darkblue);
 }
 
 form label {
@@ -43,7 +49,7 @@ form label {
     padding-bottom: 6px;
     text-align: center;
     background-color: var(--offwhite);
-    color: var(--offblack);
+    color: var(--darkblue);
     min-width: 40vw;
 }
 
@@ -52,7 +58,7 @@ form input {
     text-align: left;
     padding-left: 4px;
     border: var(--lightblue) dashed 1px;
-    color: var(--offblack);
+    color: var(--darkblue);
     min-width: 60vw;
 }
 
@@ -93,6 +99,7 @@ ul button, #clearSearchesBtn {
 
 ul button {
     border-radius: 3px;
+    margin: 3px;
 }
 
 #clearSearchesBtn {
@@ -131,7 +138,7 @@ ul button {
 #forecast-title {
     margin-top: 6px;
     background-color: var(--offwhite);
-    color: var(--offblack);
+    color: var(--darkblue);
 }
 
 #current-city-day, #forecast-title, .forecast-date {
@@ -155,8 +162,9 @@ ul button {
     border-bottom: var(--tan) solid 2px;
 }
 
-#five-days {
-    margin-bottom: 60px;
+#footer {
+    min-height: 60px;
+    background-image: linear-gradient(var(--lightblue) 25%, var(--blue) 50%, var(--darkblue));
 }
 
 #current-uv {
@@ -172,11 +180,13 @@ ul button {
 .moderate-uv {
     background-color: yellow;
     border-radius: 3px;
+    color: var(--darkblue);
 }
 
 .high-uv {
     background-color: orange;
     border-radius: 3px;
+    color: var(--darkblue);
 }
 
 .veryhigh-uv {
@@ -188,3 +198,173 @@ ul button {
     background-color: fuchsia;
     border-radius: 3px;
 }
+
+button:active {
+    color: var(--blue);
+    border: var(--blue) 1px solid;
+    border-radius: 3px;
+}
+
+form button:active {
+    font-weight: bolder;
+}
+
+
+/* Responsive layout for tablets */
+@media screen and (min-width: 480px) {
+    #header {
+        font-size: 55px;
+    }
+}
+
+/* Responsive layout for laptops */
+@media screen and (min-width: 768px) {
+    button:hover {
+        font-weight: bolder;
+    }
+
+    #header {
+        font-size: 65px;
+    }
+
+    #five-days {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 16px;
+    }
+
+    .forecast-date, .forecast-stats {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 18px;
+    }
+
+    .forecast-days {
+        border-right: 2px solid var(--tan);
+        border-left: 2px solid var(--tan);
+    }
+}
+
+/* Responsive layout for desktops and large screens */
+@media screen and (min-width: 1020px) {
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #search-aside {
+        flex-direction: column;
+        max-width: 30vw;
+        margin-top: 8px;
+    }
+
+    #search-row {
+        flex-direction: column;
+        min-width: none;
+        border: none;
+    }
+
+    #clearSearchesBtn {
+        max-width: 30vw;
+    }
+
+    #forecast-content {
+        min-width: 68vw;
+        display: flex;
+        flex-direction: column;
+        border-right: none;
+        border-left: none;
+        margin-left: 5px;
+    }
+
+    #current-box {
+    color: var(--darkblue);
+    border: 1.5px solid var(--darkblue);
+    background-color: var(--offwhite);
+    margin: 8px;
+    text-align: left;
+    padding-left: 12px;
+    }
+
+    #current-city-day {
+        display: initial;
+    }
+
+    .current-stat {
+        justify-content: left;
+    }
+
+    #future-box {
+        margin: 8px;
+    }
+
+    #forecast-title {
+        text-align: left;
+        padding: 8px;
+    }
+
+    #city-input, label[for="city-input"] {
+        min-width: 0px;
+    }
+
+    label[for='city-input'] {
+        font-size: 26px;
+        text-align: left;
+        padding-left: 8px;
+    }
+
+    #city-input, form button, #clearSearchesBtn {
+        margin-left: 6px;  
+        border-radius: 3px;
+    }
+
+    #clearSearchesBtn {
+        margin-top: 12px;
+    }
+
+    form button {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    form {
+        border-bottom: 1.5px solid var(--tan);
+        margin-left: 6px;
+        padding-bottom: 10px;
+    }
+
+    #current-icon {
+        background-color: var(--tan);
+        border-radius: 500px;
+        margin-top: 6px;
+    }
+
+    #five-days {
+        text-align: left;
+    }
+
+    .forecast-days {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    ul {
+        flex-direction: column;
+        padding-top: 8px;
+        border-bottom: solid 1.5px var(--tan);
+        padding-bottom: 8px;
+    }
+
+    ul li button, #clearSearchesBtn {
+        width: 29vw;
+        margin-right: 12px;
+        margin-left: 12px;
+    }
+
+    #header {
+        margin-bottom: 16px;
+        font-size: 70px;
+    }
+}
+
+
