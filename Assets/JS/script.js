@@ -106,14 +106,14 @@ fetch("https://api.openweathermap.org/data/2.5/weather?q="+ userCity +"&appid=1a
                 $currUV.text("  " + currUVI);
                 // CREATE IF STATEMENT TO STYLE UV COLOR
                 if(currUVI < 3) {
-                    $currUV.addClass('low-uv')
+                    $currUV.attr('class','low-uv')
                 } else if (currUVI >= 3 && currUVI < 5) {
-                    $currUV.addClass('moderate-uv');
+                    $currUV.attr('class','moderate-uv');
                 } else if (currUVI >= 5 && currUVI < 7) {
-                    $currUV.addClass('high-uv');
+                    $currUV.attr('class','high-uv');
                 } else if (currUVI >= 7 && currUVI < 9) {
-                    $currUV.addClass('veryhigh-uv');
-                } else ($currUV.addClass('extreme-uv'));
+                    $currUV.attr('class','veryhigh-uv');
+                } else ($currUV.attr('class','extreme-uv'));
 
 
                 // might just need the city name to save to local storage and then push it through as the variable
