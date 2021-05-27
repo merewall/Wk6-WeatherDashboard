@@ -1,0 +1,184 @@
+:root {
+    --offblack: #001829;
+    --darkblue: #030455;
+    --blue: #02367A;
+    --darkgray: #284B63;
+    --offwhite: #F5F5F5;
+    --green: #3C6E71;
+    --lightblue: #00B4D8;
+    --tan: #ADADAD;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--offwhite);
+}
+
+#header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--darkblue),var(--blue));
+    color: var(--offwhite);
+    font-size: 48px;
+    text-align: center;
+    border-bottom: var(--lightblue) solid 6px;
+}
+
+#search-aside, form {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-row {
+    display: flex;
+    background-color:var(--offwhite);
+}
+
+form label {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+    background-color: var(--offwhite);
+    color: var(--offblack);
+    min-width: 40vw;
+}
+
+form input {
+    background: var(--offwhite);
+    text-align: left;
+    padding-left: 4px;
+    border: var(--lightblue) dashed 1px;
+    color: var(--offblack);
+    min-width: 60vw;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+form button, form input {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 18px;
+}
+
+form button {
+    background-color:  var(--lightblue);
+    color: var(--offwhite);
+    border: none;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: var(--offwhite);
+}
+
+ul button, #clearSearchesBtn {
+    background-color: var(--tan);
+    color: var(--offwhite);
+    padding: 3px;
+    border: none;
+    font-size: 18px;
+}
+
+ul button {
+    border-radius: 3px;
+}
+
+#clearSearchesBtn {
+    width: 100vw;
+}
+
+#forecast-content {
+    text-align: center;
+    border-right: 1px solid var(--darkblue);
+    border-left: 1px solid var(--darkblue);
+}
+
+#current-box {
+    border-top: var(--darkblue) solid 1px;
+    border-bottom: var(--darkblue) solid 1px;
+    background-color: var(--blue);
+    color: var(--offwhite);
+    padding-bottom: 12px;
+}
+
+.current-stat {
+    display: flex;
+    justify-content: center;
+}
+
+.current-stat-label {
+    padding-right: 6px;
+}
+
+#current-city-day, .current-stat div, #forecast-title, .forecast-date, .forecast-stats {
+    font-size: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#forecast-title {
+    margin-top: 6px;
+    background-color: var(--offwhite);
+    color: var(--offblack);
+}
+
+#current-city-day, #forecast-title, .forecast-date {
+    font-weight: 600;
+}
+
+#current-city-day {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+.forecast-days {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: var(--darkgray);
+    color: var(--offwhite);
+    border-top: var(--tan) solid 2px;
+    border-bottom: var(--tan) solid 2px;
+}
+
+#current-uv {
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.low-uv {
+    background-color: green;
+    border-radius: 3px;
+}
+
+.moderate-uv {
+    background-color: yellow;
+    border-radius: 3px;
+}
+
+.high-uv {
+    background-color: orange;
+    border-radius: 3px;
+}
+
+.veryhigh-uv {
+    background-color: red;
+    border-radius: 3px;
+}
+
+.extreme-uv {
+    background-color: fuchsia;
+    border-radius: 3px;
+}

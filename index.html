@@ -4,10 +4,105 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" />
+    <!-- Link to reset and styles stylesheets -->
+    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
+    <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    <title>Weather Dashboard</title>
 </head>
 <body>
+    <div id='header'>
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div id="main">
+        <div id="search-aside">
+            <form>
+                <div id="search-row">
+                    <label for="city-input">Search for a city:</label>
+                    <input type='text' id='city-input' name="city-input" placeholder="ex. Atlanta"></input>
+                </div>
+                <button type="submit">SEARCH</button>
+            </form>
+            <ul id="saved-searches"></ul>
+            <div id="clearSearchDiv">
+                <button id="clearSearchesBtn">Clear Searches</button>
+            </div>
+        </div>
+        <div id="forecast-content">
+            <div id="current-box">
+                <div id="current-city-day">
+                    <span id="city-name">-</span>
+                    <span id="current-date"></span>
+                    <span id="span-icon"><img id="current-icon" src=""></span>
+                </div>
+                <div id="current-stats">
+                    <div id="temp" class="current-stat">
+                        <div id="temp-label" class="current-stat-label">Temp: </div>
+                        <div id="current-temp">-</div>
+                    </div>
+                    <div id="wind" class="current-stat">
+                        <div id="wind-label" class="current-stat-label">Wind: </div>
+                        <div id="current-wind">-</div>
+                    </div>
+                    <div id="humidity" class="current-stat">
+                        <div id="humidity-label" class="current-stat-label">Humidity: </div>
+                        <div id="current-humidity">-</div>
+                    </div>
+                    <div id="uv" class="current-stat">
+                        <div id="uv-label" class="current-stat-label">UV Index: </div>
+                        <div id="current-uv">-</div>
+                    </div>
+                </div>
+            </div>
+            <div id="future-box">
+                <div id="forecast-title">
+                    <h2>5-Day Forecast</h2>
+                </div>
+                <div id="five-days">
+                    <div id="day1" class="forecast-days">
+                        <div id="date1" class="forecast-date"></div>
+                        <img id="icon1" class="forecast-icons forecast-stats" src=""/>
+                        <div id="temp1" class="forecast-temps forecast-stats">Temp: -</div>
+                        <div id="wind1" class="forecast-winds forecast-stats">Wind: -</div>
+                        <div id="humidity1" class="forecast-humiditys forecast-stats">Humidity: -</div>
+                    </div>
+                    <div id="day2" class="forecast-days">
+                        <div id="date2" class="forecast-date"></div>
+                        <img id="icon2" class="forecast-icons forecast-stats" src=""/>
+                        <div id="temp2" class="forecast-temps forecast-stats">Temp: -</div>
+                        <div id="wind2" class="forecast-winds forecast-stats">Wind: -</div>
+                        <div id="humidity2" class="forecast-humiditys forecast-stats">Humidity: -</div>
+                    </div>
+                    <div id="day3" class="forecast-days">
+                        <div id="date3" class="forecast-date forecast-stats"></div>
+                        <img id="icon3" class="forecast-icons forecast-stats" src=""/>
+                        <div id="temp3" class="forecast-temps forecast-stats">Temp: -</div>
+                        <div id="wind3" class="forecast-winds forecast-stats">Wind: -</div>
+                        <div id="humidity3" class="forecast-humiditys forecast-stats">Humidity: -</div>
+                    </div>
+                    <div id="day4" class="forecast-days">
+                        <div id="date4" class="forecast-date"></div>
+                        <img id="icon4" class="forecast-icons forecast-stats" src=""/>
+                        <div id="temp4" class="forecast-temps forecast-stats">Temp: -</div>
+                        <div id="wind4" class="forecast-winds forecast-stats">Wind: -</div>
+                        <div id="humidity4" class="forecast-humiditys forecast-stats">Humidity: -</div>
+                    </div>
+                    <div id="day5" class="forecast-days">
+                        <div id="date5" class="forecast-date"></div>
+                        <img id="icon5" class="forecast-icons forecast-stats" src=""/>
+                        <div id="temp5" class="forecast-temps forecast-stats">Temp: -</div>
+                        <div id="wind5" class="forecast-winds forecast-stats">Wind: -</div>
+                        <div id="humidity5" class="forecast-humiditys forecast-stats">Humidity: -</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="./Assets/JS/script.js"></script>
 </body>
 </html>
