@@ -215,6 +215,14 @@ form button:active {
     #header {
         font-size: 55px;
     }
+
+    form input {
+        min-width: 58vw;
+    }
+
+    #clearSearchesBtn {
+        width: 98vw;
+    }
 }
 
 /* Responsive layout for laptops */

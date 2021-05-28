@@ -10,18 +10,23 @@
     <!-- Link to reset and styles stylesheets -->
     <link rel="stylesheet" href="./Assets/CSS/reset.css" />
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
+    <!-- Link to favicon -->
+    <link rel="icon" type="image/png" href="./Assets/Images/favicon.png">
     <title>Weather Dashboard</title>
 </head>
 <body>
     <div id='header'>
+        <!-- Page header -->
         <h1>Weather Dashboard</h1>
     </div>
+    <!-- Flex container for page content -->
     <div id="main">
+        <!-- Container for search bar and saved searches-->
         <div id="search-aside">
             <form>
                 <div id="search-row">
                     <label for="city-input">Search for a city:</label>
-                    <input type='text' id='city-input' name="city-input" placeholder="ex. Atlanta"></input>
+                    <input type='text' id='city-input' name="city-input" placeholder=" ex. Atlanta"></input>
                 </div>
                 <button type="submit">SEARCH</button>
             </form>
@@ -30,7 +35,9 @@
                 <button id="clearSearchesBtn">Clear Searches</button>
             </div>
         </div>
+        <!-- Flex container for all weather forecast content -->
         <div id="forecast-content">
+            <!-- Container for the current day's weather -->
             <div id="current-box">
                 <div id="current-city-day">
                     <span id="city-name">-</span>
@@ -56,6 +63,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Container for 5-day forecast -->
             <div id="future-box">
                 <div id="forecast-title">
                     <h2>5-Day Forecast</h2>
@@ -100,9 +108,14 @@
             </div>
         </div>
     </div>
+    <!-- Footer for page aesthetic -->
     <div id="footer"></div>
+
+    <!-- Link to JQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Link to moment js library for rendering current date(s) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <!-- Link to JavaScript -->
     <script src="./Assets/JS/script.js"></script>
 </body>
 </html>
