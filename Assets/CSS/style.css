@@ -1,19 +1,20 @@
+/* Page color scheme generated with https://coolors.co/ */
 :root {
     --darkblue: #030455;
     --blue: #02367A;
     --darkgray: #284B63;
-    --offwhite: #F5F5F5;
-    --darkerwhite: #ebebeb; 
-    --green: #3C6E71;
     --lightblue: #00B4D8;
+    --offwhite: #F5F5F5;
     --tan: #ADADAD;
 }
 
+/* Setting page background color and font-family pulled from https://fonts.google.com/ */
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: var(--offwhite);
 }
 
+/* Styling header with linear gradient and centered title */
 #header {
     height: 150px;
     display: flex;
@@ -26,15 +27,19 @@ body {
     border-bottom: var(--lightblue) solid 6px;
 }
 
-#search-aside, form {
+/* Stacking search area vertically */
+#search-aside, 
+form {
     display: flex;
     flex-direction: column;
 }
 
+/* Dark border around search area  */
 form {
     border-bottom: solid 2px var(--darkblue);
 }
 
+/* Put search label and input in a row with top and bottom borders */
 #search-row {
     display: flex;
     background-color:var(--offwhite);
@@ -42,17 +47,20 @@ form {
     border-bottom: solid 2px var(--darkblue);
 }
 
+/* Spacing out the search bar label and styling with page color scheme */
 form label {
     font-size: 18px;
     font-weight: 600;
     padding-top: 6px;
     padding-bottom: 6px;
-    text-align: center;
+    padding-right: 12px;
+    text-align: right;
     background-color: var(--offwhite);
     color: var(--darkblue);
     min-width: 40vw;
 }
 
+/* Search input area takes up rest of of viewport from search label and aligns to left with a dashed border */
 form input {
     background: var(--offwhite);
     text-align: left;
@@ -62,16 +70,20 @@ form input {
     min-width: 60vw;
 }
 
+/* Italicize the placeholder for the search bar */
 input::placeholder {
     font-style: italic;
 }
 
-form button, form input {
+/* Spacing within the search input and around search submit button */
+form button, 
+form input {
     padding-top: 4px;
     padding-bottom: 4px;
     font-size: 18px;
 }
 
+/* Make search button lightblue and remove default border */
 form button {
     background-color:  var(--lightblue);
     color: var(--offwhite);
@@ -79,6 +91,7 @@ form button {
     text-align: center;
 }
 
+/* Make searched city list items wrap to a new line with re-sizing */
 ul {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +102,9 @@ ul {
     background-color: var(--offwhite);
 }
 
-ul button, #clearSearchesBtn {
+/* Make searched city buttons and clear search button tan color */
+ul button, 
+#clearSearchesBtn {
     background-color: var(--tan);
     color: var(--offwhite);
     padding: 3px;
@@ -97,21 +112,25 @@ ul button, #clearSearchesBtn {
     font-size: 18px;
 }
 
+/* Searched city buttons have rounded corners and space between each */
 ul button {
     border-radius: 3px;
     margin: 3px;
 }
 
+/* The clear searches button spans width of viewport in mobile apps */
 #clearSearchesBtn {
     width: 100vw;
 }
 
+/* Center all forecast content and add right and left dark border */
 #forecast-content {
     text-align: center;
     border-right: 1px solid var(--darkblue);
     border-left: 1px solid var(--darkblue);
 }
 
+/* Dark top and bottom border around current day's forecast, with dark background and light text */
 #current-box {
     border-top: var(--darkblue) solid 1px;
     border-bottom: var(--darkblue) solid 1px;
@@ -120,37 +139,48 @@ ul button {
     padding-bottom: 12px;
 }
 
+/* Each current stat (temp, humidity, wind, uvi) displays the label and data in a row and centered */
 .current-stat {
     display: flex;
     justify-content: center;
 }
 
+/* Spacing between stat label and data */
 .current-stat-label {
     padding-right: 6px;
 }
 
-#current-city-day, .current-stat div, #forecast-title, .forecast-date, .forecast-stats {
+/* Uniform font size and spacing for current and future titles with the stats sections */
+#current-city-day, 
+.current-stat div, 
+#forecast-title, 
+.forecast-date, 
+.forecast-stats {
     font-size: 26px;
     padding-top: 6px;
     padding-bottom: 6px;
 }
 
+/* Extra space before 5-day forecast and contrast 5-day forecast title with light background and dark font color */
 #forecast-title {
     margin-top: 6px;
     background-color: var(--offwhite);
     color: var(--darkblue);
 }
 
+/* Bold the current city, current date, the 5-day forecast label and each 5-day forecast date */
 #current-city-day, #forecast-title, .forecast-date {
     font-weight: 600;
 }
 
+/* Put the current city, date, and icon stacked vertically with extra line spacing on mobile screens */
 #current-city-day {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
 }
 
+/* Each 5-day forecast day is a box with dark background, light text and spacing between each */
 .forecast-days {
     margin-top: 6px;
     margin-bottom: 6px;
@@ -162,49 +192,59 @@ ul button {
     border-bottom: var(--tan) solid 2px;
 }
 
+/* Footer for spacing at page bottom and matching the header color gradient */
 #footer {
     min-height: 60px;
     background-image: linear-gradient(var(--lightblue) 25%, var(--blue) 50%, var(--darkblue));
 }
 
+/* Extra spacing around UV data that will be styled with a background color based on the value */
 #current-uv {
     padding-right: 4px;
     padding-left: 4px;
 }
 
+/* Conditional formatting for current UVI...
+/* Low UVI with value from 0 - 2 is colored green (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/ */
 .low-uv {
     background-color: green;
     border-radius: 3px;
 }
 
+/* Moderate UVI with value from 3 - 5 is colored yellow (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/
 .moderate-uv {
     background-color: yellow;
     border-radius: 3px;
     color: var(--darkblue);
 }
 
+/* High UVI with value from 6 - 7 is colored orange (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/
 .high-uv {
     background-color: orange;
     border-radius: 3px;
     color: var(--darkblue);
 }
 
+/* Very high UVI with value from 8 - 10 is colored red (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/
 .veryhigh-uv {
     background-color: red;
     border-radius: 3px;
 }
 
+/* Extreme UVI with value from 11+ is colored fuchsia (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/
 .extreme-uv {
     background-color: fuchsia;
     border-radius: 3px;
 }
 
+/* When any page button is clicked (i.e. search button, previously searched city button, or clear search button), add a dark border around button */
 button:active {
     color: var(--blue);
     border: var(--blue) 1px solid;
     border-radius: 3px;
 }
 
+/* Bold the word SEARCH when the search button is clicked */
 form button:active {
     font-weight: bolder;
 }
@@ -212,14 +252,17 @@ form button:active {
 
 /* Responsive layout for tablets */
 @media screen and (min-width: 480px) {
+    /* Make header font larger */
     #header {
         font-size: 55px;
     }
 
+    /* Adjust form input text area to fit */
     form input {
         min-width: 58vw;
     }
 
+    /* Adjust Clear Searches button to fit */
     #clearSearchesBtn {
         width: 98vw;
     }
@@ -227,26 +270,31 @@ form button:active {
 
 /* Responsive layout for laptops */
 @media screen and (min-width: 768px) {
+    /* Add button hover styling: bold buttons' texts */
     button:hover {
         font-weight: bolder;
     }
 
+    /* Make header text larger */
     #header {
         font-size: 65px;
     }
 
+    /* Display the 5 days in a row instead of stacked vertically */
     #five-days {
         display: flex;
         justify-content: space-around;
         margin-bottom: 16px;
     }
 
+    /* Font size and spacing for each of the 5 days */
     .forecast-date, .forecast-stats {
         margin-left: 8px;
         margin-right: 8px;
         font-size: 18px;
     }
 
+    /* Add right and left borders to each day's forecast to complete the borders */
     .forecast-days {
         border-right: 2px solid var(--tan);
         border-left: 2px solid var(--tan);
@@ -255,27 +303,27 @@ form button:active {
 
 /* Responsive layout for desktops and large screens */
 @media screen and (min-width: 1021px) {
+    /* Move search area to the side, displayed in a row with all forecast content */
     #main {
         display: flex;
         flex-wrap: wrap;
     }
 
+    /* Stacked search form, list of searched cities and clear searches button stacked vertically */
     #search-aside {
         flex-direction: column;
-        max-width: 28vw;
+        max-width: 26vw;
         margin-top: 8px;
     }
 
+    /* Stack search label and input area vertically */
     #search-row {
         flex-direction: column;
         min-width: none;
         border: none;
     }
 
-    #clearSearchesBtn {
-        max-width: 27vw;
-    }
-
+    /* Stack current day's forecast and 5-day forecast vertically and adjust width */
     #forecast-content {
         min-width: 68vw;
         display: flex;
@@ -285,6 +333,7 @@ form button:active {
         margin-left: 5px;
     }
 
+    /* Change current box to light background and dark font and adjust to left */
     #current-box {
     color: var(--darkblue);
     border: 1.5px solid var(--darkblue);
@@ -294,63 +343,76 @@ form button:active {
     padding-left: 12px;
     }
 
+    /* Revert city name, current date, and icon to display in a row */
     #current-city-day {
         display: initial;
     }
 
+    /* Display current forecast info to left of div */
     .current-stat {
         justify-content: left;
     }
 
+    /* Spacing around 5-day forecast div to align with current forecast spacing */
     #future-box {
         margin: 8px;
     }
 
+    /* Align 5-day forecast title to left and additional spacing */
     #forecast-title {
         text-align: left;
         padding: 8px;
     }
 
+    /* Remove mid-width to let search area and forecast area display in row */
     #city-input, label[for="city-input"] {
         min-width: 0px;
     }
 
+    /* Search area has larger font and align to left */
     label[for='city-input'] {
         font-size: 26px;
         text-align: left;
         padding-left: 8px;
     }
 
+    /* Rounded corners and spacing for search form and clear search button since no longer displaying as the full page width */
     #city-input, form button, #clearSearchesBtn {
         margin-left: 6px;  
         border-radius: 3px;
     }
 
+    /* Additional spacing betweeen Clear Search button and searched cities list */
     #clearSearchesBtn {
         margin-top: 12px;
     }
 
+    /* Addtional spacing between search input, search submit button, and list of searched cities */
     form button {
         margin-top: 6px;
         margin-bottom: 6px;
     }
 
+    /* Tan line between search form and list of searched cities */
     form {
         border-bottom: 1.5px solid var(--tan);
         margin-left: 6px;
         padding-bottom: 10px;
     }
 
+    /* Adding circle background to each current icon to contrast with light background */
     #current-icon {
         background-color: var(--tan);
         border-radius: 500px;
         margin-top: 6px;
     }
 
+    /* Align 5-day forecast info to the left */
     #five-days {
         text-align: left;
     }
 
+    /* Stack searched cities vertically and tan line at bottom of list before Clear Search button */
     ul {
         flex-direction: column;
         padding-top: 8px;
@@ -359,18 +421,20 @@ form button:active {
         margin-left: 6px;
     }
 
+    /* Adjust searched city button to fit in search aside area */
     ul li button {
-        width: 27vw;
-        /* margin-right: 6px; */
+        width: 25vw;
         margin-left: 6px;
     }
 
+    /* Adjust clear searches button to fit in search aside area */
     #clearSearchesBtn {
-        width: 29vw;
+        width: 25vw;
         margin-right: 12px;
         margin-left: 12px;
     }
 
+    /* Make header font larger and extra space before page content */
     #header {
         margin-bottom: 16px;
         font-size: 70px;
