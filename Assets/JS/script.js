@@ -119,11 +119,11 @@ function getCityWeather(userCity) {
                     // UVI range values sourced from https://www.epa.gov/sites/production/files/documents/uviguide.pdf
                     if(currUVI < 3) {
                         $currUV.attr('class','low-uv')
-                    } else if (currUVI >= 3 && currUVI < 5) {
+                    } else if (currUVI >= 3 && currUVI < 6) {
                         $currUV.attr('class','moderate-uv');
-                    } else if (currUVI >= 5 && currUVI < 7) {
+                    } else if (currUVI >= 6 && currUVI < 8) {
                         $currUV.attr('class','high-uv');
-                    } else if (currUVI >= 7 && currUVI < 9) {
+                    } else if (currUVI >= 8 && currUVI < 10) {
                         $currUV.attr('class','veryhigh-uv');
                     } else ($currUV.attr('class','extreme-uv'));
 
