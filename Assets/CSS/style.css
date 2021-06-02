@@ -205,7 +205,7 @@ ul button {
 }
 
 /* Conditional formatting for current UVI...
-/* Low UVI with value from 0 - 2 is colored green (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/ */
+/* Low UVI with value from 0 - 2 is colored green (values determined from https://www.epa.gov/sites/production/files/documents/uviguide.pdf*/
 .low-uv {
     background-color: green;
     border-radius: 3px;
