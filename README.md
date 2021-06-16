@@ -25,7 +25,9 @@ The following acceptance criteria were used in the development of this web appli
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
 
-![Demo video of the weather dashboard](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/Assets/Images/weather-dashboard-demo.gif)    
+![Demo video of the weather dashboard](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/Assets/Images/weather-dashboard-demo.gif)  
+
+![Screenshot of the weather dashboard in mobile view](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/Assets/Images/weather-dashboard-screenshot.png)
 
 ## Deployed Application Link
 
