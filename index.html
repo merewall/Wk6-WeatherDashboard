@@ -32,7 +32,9 @@
                 <!-- Search submit button -->
                 <button type="submit">SEARCH</button>
             </form>
+            <!-- List to dynamically render saved searches buttons -->
             <ul id="saved-searches"></ul>
+            <!-- Button to clear saved searches -->
             <div id="clearSearchDiv">
                 <button id="clearSearchesBtn">Clear Searches</button>
             </div>
@@ -41,11 +43,13 @@
         <div id="forecast-content">
             <!-- Container for the current day's weather -->
             <div id="current-box">
+                <!-- Current city, date, and icon for conditions -->
                 <div id="current-city-day">
                     <span id="city-name">-</span>
                     <span id="current-date"></span>
                     <span id="span-icon"><img id="current-icon" src=""></span>
                 </div>
+                <!-- Current weather stats for temp, wind, humidity, and UVI -->
                 <div id="current-stats">
                     <div id="temp" class="current-stat">
                         <div id="temp-label" class="current-stat-label">Temp: </div>
@@ -67,10 +71,13 @@
             </div>
             <!-- Container for 5-day forecast -->
             <div id="future-box">
+                <!-- 5-day forecast title -->
                 <div id="forecast-title">
                     <h2>5-Day Forecast</h2>
                 </div>
+                <!-- Container to flex the 5 days within -->
                 <div id="five-days">
+                    <!-- Day 1 stats -->
                     <div id="day1" class="forecast-days">
                         <div id="date1" class="forecast-date"></div>
                         <img id="icon1" class="forecast-icons forecast-stats" src=""/>
@@ -78,6 +85,7 @@
                         <div id="wind1" class="forecast-winds forecast-stats">Wind: -</div>
                         <div id="humidity1" class="forecast-humiditys forecast-stats">Humidity: -</div>
                     </div>
+                    <!-- Day 2 stats -->
                     <div id="day2" class="forecast-days">
                         <div id="date2" class="forecast-date"></div>
                         <img id="icon2" class="forecast-icons forecast-stats" src=""/>
@@ -85,6 +93,7 @@
                         <div id="wind2" class="forecast-winds forecast-stats">Wind: -</div>
                         <div id="humidity2" class="forecast-humiditys forecast-stats">Humidity: -</div>
                     </div>
+                    <!-- Day 3 stats -->
                     <div id="day3" class="forecast-days">
                         <div id="date3" class="forecast-date forecast-stats"></div>
                         <img id="icon3" class="forecast-icons forecast-stats" src=""/>
@@ -92,6 +101,7 @@
                         <div id="wind3" class="forecast-winds forecast-stats">Wind: -</div>
                         <div id="humidity3" class="forecast-humiditys forecast-stats">Humidity: -</div>
                     </div>
+                    <!-- Day 4 stats -->
                     <div id="day4" class="forecast-days">
                         <div id="date4" class="forecast-date"></div>
                         <img id="icon4" class="forecast-icons forecast-stats" src=""/>
@@ -99,6 +109,7 @@
                         <div id="wind4" class="forecast-winds forecast-stats">Wind: -</div>
                         <div id="humidity4" class="forecast-humiditys forecast-stats">Humidity: -</div>
                     </div>
+                    <!-- Day 5 stats -->
                     <div id="day5" class="forecast-days">
                         <div id="date5" class="forecast-date"></div>
                         <img id="icon5" class="forecast-icons forecast-stats" src=""/>
