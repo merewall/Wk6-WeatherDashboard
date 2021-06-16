@@ -39,5 +39,5 @@ https://github.com/merewall/Wk6-WeatherDashboard
 Licensed under the [MIT LICENSE](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/LICENSE)
 ## Contact
 
-Meredith Wall
-E: [mlwall@alumni.princeton.edu]
+* Meredith Wall
+* Email: [mlwall@alumni.princeton.edu]
