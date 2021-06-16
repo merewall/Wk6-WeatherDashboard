@@ -11,6 +11,16 @@ The following acceptance criteria were used in the development of this web appli
 * When the user views the UV index, they are presented with a color that indicates whether the conditions are favorable, moderate, or severe
 * When the user views future weather conditions for that city, they are pesented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
 * When the user clicks on a city in the search history, they are again presented with current and future conditions for that city
+
+## Technologies Used
+* HTML 5
+* CSS
+* JavaScript
+* [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js)
+* [Moment.js](https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js)
+* [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
+* [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api)
+* [Google Fonts](https://fonts.google.com/)
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
 
@@ -23,3 +33,11 @@ https://merewall.github.io/Wk6-WeatherDashboard/
 
 The GitHub repository for this web application can be found:
 https://github.com/merewall/Wk6-WeatherDashboard
+
+## License
+
+Licensed under the [MIT LICENSE](https://github.com/merewall/Wk6-WeatherDashboard/blob/main/LICENSE)
+## Contact
+
+Meredith Wall
+E: [mlwall@alumni.princeton.edu]
