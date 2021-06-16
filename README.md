@@ -21,6 +21,7 @@ The following acceptance criteria were used in the development of this web appli
 * [OpenWeatherMap Current Weather API](https://openweathermap.org/current)
 * [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api)
 * [Google Fonts](https://fonts.google.com/)
+* [Coolors](https://coolors.co/*/)
 ## Mock-Up
 The following image shows the web application's appearance and functionality:
 
