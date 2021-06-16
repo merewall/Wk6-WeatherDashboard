@@ -160,6 +160,10 @@ function renderSavedCities() {
     // If there are cities saved to local storage, set the array of searched cities to those
     if(storedCities) {
         searchedCityArray = storedCities;
+
+        // on page reload, set city to the last searched city
+        let lastSearchedCity = storedCities[storedCities.length - 1];
+        getCityWeather(lastSearchedCity);
         
         // For each previously searched city saved in local storage, render it to the page as a button in a list
         for (let i=0; i < storedCities.length; i++) {
