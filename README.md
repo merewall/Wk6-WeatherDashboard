@@ -1,5 +1,5 @@
 # Wk6-WeatherDashboard
-Build a weather dashboard that will run in the browser using third-party APIs and feature dynamically updated HTML and CSS
+A weather dashboard that will run in the browser using third-party APIs and feature dynamically updated HTML and CSS
 ## Description
 This project was completed after learning HTML, CSS, JavaScript, Web APIs, Third Party APIs, and Server Side APIs. The task was to create a weather dashboard application that retreieves weather data for different cities. The app will run in the browser and feature dynamically updated HTML and CSS. This assignment was meant to add in the use of the newly learned concept of fetch.
 
